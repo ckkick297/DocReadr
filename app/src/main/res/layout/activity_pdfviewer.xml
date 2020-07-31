@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rl"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context=".PDFViewer">
+
+
+
+    <LinearLayout
+        android:layout_above="@+id/ppcont"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/NAV"
+            app:titleTextColor="@android:color/background_dark">
+
+            <ImageButton
+                android:tint="@color/nav_item_unselected_color"
+                android:background="@color/colorPrimary"
+                android:src="@drawable/keyboard_voice"
+                android:layout_gravity="right"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                app:queryHint="Search..."
+                app:queryBackground="@color/colorPrimary"
+                app:searchIcon="@drawable/ic_icon_search"
+                android:layout_gravity="right"
+                app:iconifiedByDefault="false"/>
+
+
+<!--            <ImageView-->
+<!--                android:id="@+id/jj"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginLeft="300dp"-->
+<!--                android:layout_marginRight="2dp"-->
+<!--                android:src="@drawable/graph_music" />-->
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp">
+
+
+            <TextView
+                android:id="@+id/tvPDFViewerTitle"
+                android:text="@string/app_name"
+                android:textSize="18dp"
+                android:singleLine="true"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toLeftOf="@+id/tvPDFViewerLanguage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/tvPDFViewerPages"
+                android:text="@string/app_name"
+                android:textSize="14dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPDFViewerTitle"/>
+
+            <TextView
+                android:id="@+id/tvPDFViewerLanguage"
+                android:text="En"
+                android:textAllCaps="true"
+                android:textSize="16dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/imageButton7"/>
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/nav_item_unselected_color"
+                android:background="@null"
+                android:onClick="textSelect"
+                app:srcCompat="@drawable/ic_computer"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/seekbarstatus"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="seekbarstatus"></TextView>
+
+<!--        <FrameLayout-->
+<!--            xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <com.pdftron.pdf.PDFViewCtrl-->
+<!--                android:id="@+id/pdfv"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:scrollbars="vertical|horizontal"/>-->
+
+<!--        </FrameLayout>-->
+
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfv"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+<!--    <com.leinardi.android.speeddial.SpeedDialView-->
+<!--        android:id="@+id/speedDial"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginStart="100dp"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:orientation="vertical"-->
+<!--        app:sdMainFabClosedBackgroundColor="@color/colorAccent"-->
+<!--        app:sdMainFabClosedSrc="@drawable/ic_action_plus"-->
+<!--        app:sdMainFabOpenedBackgroundColor="@color/colorAccent" />-->
+
+<!--    <com.leinardi.android.speeddial.SpeedDialView-->
+<!--        android:id="@+id/speedDialfolder"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginStart="100dp"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:orientation="vertical"-->
+<!--        app:sdMainFabClosedBackgroundColor="@color/colorAccent"-->
+<!--        app:sdMainFabClosedSrc="@drawable/ic_action_plus"-->
+<!--        app:sdMainFabOpenedBackgroundColor="@color/colorAccent" />-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabNotes"
+        android:onClick="fabNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="mini"
+        android:backgroundTint="@color/white"
+        app:borderWidth="0dp"
+        android:src="@drawable/ic_icon_books"
+        android:layout_marginRight="@dimen/sixteen_margin"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:id="@+id/ppcont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <SeekBar
+            android:id="@+id/seekBar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tint="@color/txtblack"
+                android:background="@null"
+                android:onClick="prevpage"
+                app:srcCompat="@drawable/ic_icon_player_prev" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tint="@color/txtblack"
+                android:background="@null"
+                android:onClick="prevLine"
+                app:srcCompat="@drawable/ic_icon_player_prev_page" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tint="@color/txtblack"
+                android:background="@null"
+                android:onClick="play"
+                app:srcCompat="@drawable/ic_icon_player_play" />
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tint="@color/txtblack"
+                android:background="@null"
+                android:onClick="nextLine"
+                app:srcCompat="@drawable/ic_icon_player_next_page" />
+
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tint="@color/txtblack"
+                android:background="@null"
+                android:onClick="nextpage"
+                app:srcCompat="@drawable/ic_icon_player_next" />
+
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_weight="1"
+                android:tint="@color/txtblack"
+                android:background="@null"
+                android:onClick="Bookmark"
+                app:srcCompat="@drawable/ic_icon_player_bookmark" />
+
+
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:id="@id/container2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true">-->
+
+<!--            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                xmlns:tools="http://schemas.android.com/tools"-->
+<!--                android:id="@+id/container"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:elevation="10dp">-->
+
+<!--                <android.support.design.widget.BottomNavigationView-->
+<!--                    android:id="@+id/navigation"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="bottom"-->
+<!--                    android:background="@color/NAV"-->
+<!--                    android:paddingRight="80dp"-->
+<!--                    android:theme="@style/BottomNavigationTheme"-->
+<!--                    app:menu="@menu/bottombar" />-->
+
+
+<!--            </FrameLayout>-->
+<!--        </LinearLayout>-->
+        </LinearLayout>
+
+</RelativeLayout>

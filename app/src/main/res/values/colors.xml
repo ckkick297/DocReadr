@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#3FC3DD</color>
+
+    <color name="lightColorLight">#FFFFFFFF</color>
+    <color name="lightColorDark">#FFFFFFFF</color>
+
+    <color name="colorPrimaryWarm">#fef6e3</color>
+    <color name="colorPrimaryDarkWarm">#fef6e3</color>
+    <color name="colorAccentWarm">#3FC3DD</color>
+
+    <color name="warmColorLight">#fef6e3</color>
+    <color name="warmColorDark">#fdeacc</color>
+
+
+    <color name="colorPrimaryDarkTheme">#FFFFFFFF</color>
+    <color name="colorPrimaryDarkDarkTheme">#FFFFFFFF</color>
+    <color name="colorAccentDarkTheme">#2ead74</color>
+
+    <color name="darkColorLight">#212121</color>
+    <color name="darkColorDark">#212121</color>
+
+
+
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="background_material_dark">#ffffff</color>
+    <color name="NAV">#FFFFFFFF</color>
+    <color name="orange"> #F07F34</color>
+    <color name="sbg"> #E8EBF2</color>
+    <color name="pdfred"> #dc4242</color>
+    <color name="txtblack"> #2f2929</color>
+    <color name="nmode"> #000000</color>
+    <color name="gray">#DDDCDC</color>
+
+    <color name="nav_item_selected_color">#363636</color>
+    <color name="nav_item_unselected_color">#818181</color>
+
+</resources>

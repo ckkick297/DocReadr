@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--
+    <item
+        android:id="@+id/menu_pdf_Viewer_search"
+        android:icon="@drawable/ic_icon_search"
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView"
+        android:title="Search" />
+-->
+    <item
+        android:id="@+id/lang_pdf_reader"
+        app:showAsAction="always"
+        android:title="" />
+
+    <item
+        android:id="@+id/vesett_pdf_reader"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_computer"
+        android:title="Voice Engine Settings" />
+
+    <item
+        android:id="@+id/menuNight"
+        android:title="@string/menu_title_night_mode" />
+
+    <item
+        android:id="@+id/tedit"
+        android:title="Trigger Highlight" />
+
+    <item android:id="@+id/setting_ham_menu_item"
+        android:title="@string/menu_title_theme"
+        android:icon="@drawable/ic_settings_black_24dp"/>
+
+</menu>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rlcont"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".TxtMaker">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar30"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/NAV"
+        android:layout_alignParentTop="true"
+        app:titleTextColor="@android:color/background_dark" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar30"
+        android:layout_above="@+id/ppcont1"
+        android:padding="16dp"
+        android:id="@+id/sviewtxt">
+        <TextView
+            android:id="@+id/tview"
+            android:textColor="@color/txtblack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ppcont1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+
+        <SeekBar
+            android:id="@+id/seekBar3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tint="@color/nav_item_unselected_color"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_icon_player_prev" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tint="@color/txtblack"
+                android:background="@null"
+
+                android:onClick="prevLine"
+                app:srcCompat="@drawable/ic_icon_player_prev_page" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tint="@color/txtblack"
+                android:background="@null"
+
+                android:onClick="play"
+                app:srcCompat="@drawable/ic_icon_player_play" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tint="@color/txtblack"
+                android:background="@null"
+
+                android:onClick="nextLine"
+                app:srcCompat="@drawable/ic_icon_player_next_page" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tint="@color/nav_item_unselected_color"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_icon_player_next" />
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_weight="1"
+                android:tint="@color/nav_item_unselected_color"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_icon_player_bookmark" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

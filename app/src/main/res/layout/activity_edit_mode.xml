@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rlcont"
+    android:clickable="true"
+    tools:context=".TxtMaker">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ppcont1"
+        android:id="@+id/sviewtxt">
+
+        <TextView
+            android:id="@+id/tview"
+            android:textIsSelectable="true"
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="serif"
+            android:layout_gravity="center_horizontal|end"
+            android:lineSpacingMultiplier="1.0"
+            android:lineSpacingExtra="6dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentTop="true" />
+
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/ppcont1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical">
+
+
+        <SeekBar
+            android:id="@+id/seekBar3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tint="@color/nav_item_unselected_color"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_icon_player_prev" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tint="@color/txtblack"
+                android:background="@color/colorPrimary"
+
+                android:onClick="prevLine"
+                app:srcCompat="@drawable/ic_icon_player_prev_page" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tint="@color/txtblack"
+                android:background="@color/colorPrimary"
+                android:onClick="play"
+                app:srcCompat="@drawable/ic_icon_player_play" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tint="@color/txtblack"
+                android:background="@color/colorPrimary"
+
+                android:onClick="nextLine"
+                app:srcCompat="@drawable/ic_icon_player_next_page" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tint="@color/nav_item_unselected_color"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_icon_player_next" />
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_weight="1"
+                android:tint="@color/nav_item_unselected_color"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_icon_player_bookmark" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

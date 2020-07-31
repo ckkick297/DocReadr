@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lineardialog"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pitch"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/nav_item_selected_color"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:visibility="gone"
+        android:tint="@color/nav_item_selected_color"
+        android:layout_gravity="center"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ic_arrow_drop_down_black_24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:text="1f" />
+
+        <SeekBar
+            android:id="@+id/seekBar78"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:progressTint="@color/colorAccent"
+            android:thumbTint="@color/colorAccent"
+            android:progress="50"
+            />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:textColor="@color/nav_item_selected_color"
+            android:text="50%" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView88"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Speed"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/nav_item_selected_color"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:visibility="gone"
+        android:tint="@color/nav_item_selected_color"
+        android:layout_gravity="center"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ic_arrow_drop_down_black_24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:text="1x" />
+
+        <SeekBar
+            android:id="@+id/seekBar89"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:progressTint="@color/colorAccent"
+            android:thumbTint="@color/colorAccent"
+            android:progress="50"
+            />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:textColor="@color/nav_item_selected_color"
+            android:text="50%" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Voice Gender"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/nav_item_selected_color"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rg101">
+            <RadioButton
+                android:buttonTint="@color/nav_item_unselected_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb1"
+                android:text="Male"/>
+            <RadioButton
+                android:buttonTint="@color/nav_item_unselected_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb2"
+                android:text="Female"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/langLinearLayout"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/language_black"
+            android:tint="@color/nav_item_selected_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Languages"
+            android:layout_marginLeft="@dimen/eight_margin"
+            android:textColor="@color/nav_item_selected_color"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinnerLang"
+        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_baseline_voicemail_24"
+            android:tint="@color/nav_item_selected_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Voices"
+            android:layout_marginLeft="@dimen/eight_margin"
+            android:textColor="@color/nav_item_selected_color"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:spinnerMode="dialog"
+        />
+
+    <Button
+        android:id="@+id/apply"
+        android:textColor="@color/nav_item_selected_color"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Apply Changes" />
+
+</LinearLayout>

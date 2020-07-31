@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buttoncont"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@color/NAV">
+
+        <SearchView
+            android:id="@+id/searchView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/NAV"
+            android:queryHint="Search Keyword in Document"
+            android:voiceSearchMode="showVoiceSearchButton"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search Your Document in app"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"/>
+
+
+
+        <ImageView
+            android:id="@+id/speakVoice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:background="@color/NAV"
+            android:src="@drawable/keyboard_voice" />
+
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/NAV"
+            android:onClick="nextfile"
+            android:layout_marginLeft="10dp"
+            android:gravity="right"
+            app:srcCompat="@drawable/importarrow"
+            />
+    </androidx.appcompat.widget.Toolbar>
+    <com.victor.loading.rotate.RotateLoading
+        android:id="@+id/rotateloading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:elevation="24dp"
+        app:loading_color="#000"
+        app:loading_width="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10">
+        </ListView>
+        <GridView
+            android:id="@+id/gridView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            android:numColumns="2"
+            android:paddingBottom="110dp"
+            android:stretchMode="columnWidth"
+            android:visibility="gone"></GridView>
+
+
+    </LinearLayout>
+
+
+    <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+            <Button
+                android:id="@+id/buttonnew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="61dp"
+                android:background="@color/colorAccent"
+                android:onClick="traverse"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="SEARCH ALL FILES"
+                android:textColor="@color/cardview_light_background" />
+            <Button
+                android:id="@+id/but1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="61dp"
+                android:background="@color/colorAccent"
+                android:onClick="traverse"
+                android:layout_gravity="center"
+
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="SEARCH ALL FILES"
+                android:textColor="@color/cardview_light_background" />
+            <Button
+                android:id="@+id/but2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="61dp"
+                android:background="@color/colorAccent"
+                android:onClick="traverse"
+                android:layout_gravity="center"
+
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="SEARCH ALL FILES"
+                android:textColor="@color/cardview_light_background" />
+            <Button
+                android:id="@+id/but3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="61dp"
+                android:background="@color/colorAccent"
+                android:onClick="traverse"
+                android:layout_gravity="center"
+
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="SEARCH ALL FILES"
+                android:textColor="@color/cardview_light_background" />
+
+        </LinearLayout>
+    -->
+
+
+
+
+
+
+
+</RelativeLayout>

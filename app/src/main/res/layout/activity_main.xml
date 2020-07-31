@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buttoncont"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="top"
+        android:visibility="gone"
+        android:background="@color/NAV">
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/NAV"
+            android:onClick="nextfile"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="right"
+            android:tint="@color/nav_item_selected_color"
+            app:srcCompat="@drawable/importarrow" />
+
+        <ImageView
+            android:id="@+id/speakVoice"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:background="@color/NAV"
+            android:layout_gravity="right"
+            android:src="@drawable/keyboard_voice" />
+
+
+        <SearchView
+            android:id="@+id/searchView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/NAV"
+            android:layout_gravity="right"
+            android:searchIcon="@drawable/ic_icon_search"
+            android:queryHint="Search Keyword in Document"
+            android:voiceSearchMode="showVoiceSearchButton"/>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--
+    <TextView
+        android:background="@color/nav_item_unselected_color"
+        android:layout_below="@id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    -->
+
+    <com.victor.loading.rotate.RotateLoading
+        android:id="@+id/rotateloading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:elevation="24dp"
+        app:loading_color="#000"
+        app:loading_width="5dp" />
+
+    <!--
+        <Button
+            android:id="@+id/buttonnew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="61dp"
+            android:background="@color/colorAccent"
+            android:onClick="traverse"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+           android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="SEARCH ALL FILES"
+            android:textColor="@color/cardview_light_background" />
+    -->
+
+
+    <!--  <Button
+          android:id="@+id/but1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="61dp"
+          android:background="@color/colorAccent"
+          android:onClick="traverse"
+          android:paddingLeft="50dp"
+          android:paddingRight="50dp"
+          android:layout_gravity="center"
+
+          android:text="SEARCH ALL FILES"
+          android:textColor="@color/cardview_light_background" />
+
+
+      <Button
+          android:id="@+id/but2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="61dp"
+          android:background="@color/colorAccent"
+          android:onClick="traverse"
+          android:paddingLeft="50dp"
+          android:layout_gravity="center"
+
+          android:paddingRight="50dp"
+          android:text="SEARCH ALL FILES"
+          android:textColor="@color/cardview_light_background" />
+
+
+      <Button
+          android:id="@+id/but3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="61dp"
+          android:background="@color/colorAccent"
+          android:onClick="traverse"
+          android:layout_gravity="center"
+
+          android:paddingLeft="50dp"
+          android:paddingRight="50dp"
+          android:text="SEARCH ALL FILES"
+          android:textColor="@color/cardview_light_background" />
+
+  -->
+
+
+    <com.leinardi.android.speeddial.SpeedDialView
+        android:id="@+id/speedDial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        app:sdMainFabClosedBackgroundColor="@color/colorAccent"
+        app:sdMainFabClosedSrc="@drawable/ic_plus"
+        app:sdMainFabOpenedBackgroundColor="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llMainPlayer"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnAddBookMain"
+            android:text="Select ebooks"
+            android:elevation="2dp"
+            android:textAlignment="textStart"
+            android:paddingLeft="@dimen/sixteen_margin"
+            android:paddingRight="@dimen/twenty_four_margin"
+            android:textSize="18dp"
+            android:textAllCaps="false"
+            android:drawableTint="@color/nav_item_selected_color"
+            android:drawableRight="@drawable/importarrow"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:fontFamily="monospace"
+            android:textColor="@color/black"
+            android:text="Find ebooks for adding to\n your reading list." />
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10">
+
+        </ListView>
+
+        <GridView
+            android:id="@+id/gridView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            android:numColumns="2"
+            android:stretchMode="columnWidth"
+            android:visibility="gone"></GridView>
+
+
+    </LinearLayout>
+
+
+    <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+            <Button
+                android:id="@+id/buttonnew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="61dp"
+                android:background="@color/colorAccent"
+                android:onClick="traverse"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="SEARCH ALL FILES"
+                android:textColor="@color/cardview_light_background" />
+            <Button
+                android:id="@+id/but1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="61dp"
+                android:background="@color/colorAccent"
+                android:onClick="traverse"
+                android:layout_gravity="center"
+
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="SEARCH ALL FILES"
+                android:textColor="@color/cardview_light_background" />
+            <Button
+                android:id="@+id/but2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="61dp"
+                android:background="@color/colorAccent"
+                android:onClick="traverse"
+                android:layout_gravity="center"
+
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="SEARCH ALL FILES"
+                android:textColor="@color/cardview_light_background" />
+            <Button
+                android:id="@+id/but3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="61dp"
+                android:background="@color/colorAccent"
+                android:onClick="traverse"
+                android:layout_gravity="center"
+
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="SEARCH ALL FILES"
+                android:textColor="@color/cardview_light_background" />
+
+        </LinearLayout>
+    -->
+
+
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/radiogrp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RadioButton
+                    android:id="@+id/SEARCH_ALL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ALL Ebooks"
+                    android:fontFamily="monospace"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/PDF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text=" PDFs (.pdf)"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/DOC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text=" Word (.doc/.docx)"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/TXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text=" Text files (.txt)"
+                    android:textSize="16dp" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/search_button"
+                android:drawableTint="@color/white"
+                android:drawablePadding="@dimen/twelve_margin"
+                android:drawableLeft="@drawable/ic_icon_search"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="61dp"
+                android:background="@color/colorAccent"
+                android:paddingLeft="60dp"
+                android:paddingRight="95dp"
+                android:textAllCaps="false"
+                android:text="Search"
+
+                android:textColor="@color/cardview_light_background" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar2"
+        android:orientation="vertical"
+        android:layout_above="@+id/llMainPlayer"/>
+
+    <LinearLayout
+        android:id="@+id/llMainPlayer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/five_margin"
+        android:background="@color/colorPrimary"
+        android:layout_above="@+id/container2">
+
+        <!--TextView
+            android:background="#FFDDDDDD"
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"/-->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <LinearLayout
+                android:id="@+id/main_player_title"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvMainPlayerTitle"
+                    android:text="Main Kamph"
+                    android:fontFamily="monospace"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvMainPlayerSubTitle"
+                    android:text="Essential"
+                    android:textColor="@color/nav_item_selected_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/ibMainPlayerPrev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:tint="@color/txtblack"
+                    android:background="@null"
+                    app:srcCompat="@drawable/ic_icon_player_prev" />
+
+                <ImageButton
+                    android:id="@+id/ibMainPlayerPlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:tint="@color/txtblack"
+                    android:background="@null"
+                    app:srcCompat="@drawable/ic_icon_player_play" />
+
+                <ImageButton
+                    android:id="@+id/ibMainPlayerNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:tint="@color/txtblack"
+                    android:background="@null"
+                    app:srcCompat="@drawable/ic_icon_player_next" />
+
+                <ImageButton
+                    android:id="@+id/ibMainPlayerClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:tint="@color/black"
+                    android:background="@null"
+                    android:paddingRight="@dimen/eight_margin"
+                    app:srcCompat="@drawable/ic_baseline_close_24" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBarMainPlayer"
+            android:thumbTint="@color/colorAccent"
+            android:progressTint="@color/colorAccent"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/container2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="10dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/navigation"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="bottom"
+                android:paddingRight="80dp"
+                android:paddingBottom="@dimen/eight_margin"
+                app:labelVisibilityMode="labeled"
+                app:itemIconTint="@drawable/bottom_nav_icon_color_selector"
+                app:itemTextColor="@drawable/bottom_nav_icon_color_selector"
+                android:theme="@style/BottomNavigationTheme"
+                app:menu="@menu/bottombar" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

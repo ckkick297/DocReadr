@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sixty">60dp</dimen>
+    <dimen name="fourty_two_margin">42dp</dimen>
+    <dimen name="thirty_six_margin">36dp</dimen>
+    <dimen name="thirty_margin">30dp</dimen>
+    <dimen name="twenty_four_margin">24dp</dimen>
+    <dimen name="eighteen_margin">18dp</dimen>
+    <dimen name="sixteen_margin">16dp</dimen>
+    <dimen name="twelve_margin">12dp</dimen>
+    <dimen name="eight_margin">8dp</dimen>
+    <dimen name="five_margin">5dp</dimen>
+    <dimen name="three_margin">3dp</dimen>
+    <dimen name="two_margin">2dp</dimen>
+</resources>

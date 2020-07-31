@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">DocReadr.</string>
+    <string name="Save">Save</string>
+    <string name="hint"> Search</string>
+
+    <string name="emptylistview"> </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--todo: login -->
+    <string name="client_id">1017608231002-q386guorktooipj804vicv0abo6f3j7n.apps.googleusercontent.com</string>
+    <string name="client_secret">gwid7BZK_SXR3L2rUTD-mIRo</string>
+    <string name="client_redirect_uri">https://cardscanner.dialogg.co/app/index.php/GoogleLogin/getSource</string>
+
+    <string name="login_success">Logged in successfully</string>
+    <string name="login_failed">Signup failed</string>
+    <string name="log_out">Sign out</string>
+
+
+    <!-- todo: themes -->
+    <string name="theme_light">Light</string>
+    <string name="theme_warm">Warm</string>
+    <string name="theme_dark">Dark</string>
+
+    <!-- todo: menu items -->
+    <string name="menu_title_theme">Themes</string>
+    <string name="menu_title_night_mode">Night Mode</string>
+</resources>

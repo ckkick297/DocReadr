@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/sixteen_margin"
+    android:paddingRight="@dimen/sixteen_margin"
+    android:paddingTop="@dimen/twenty_four_margin"
+    android:paddingBottom="@dimen/twenty_four_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:id="@+id/etUrlDialog"
+        android:drawableTint="@color/nav_item_unselected_color"
+        android:drawableRight="@drawable/ic_baseline_link_24"
+        android:paddingLeft="@dimen/five_margin"
+        android:paddingRight="@dimen/five_margin"
+        android:hint="Enter Web URL link.."
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewPreview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/btnUrlDialog"
+        android:text="Add"
+        android:background="@color/colorAccent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etUrlDialog"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewPreview"
+        app:cardElevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="1dp"
+        android:layout_marginBottom="1dp"
+        card_view:cardUseCompatPadding="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.freesoulapps.preview.android.Preview
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/preview"/>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rvBookFragmentItem"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivPlayedBookIcon"
+        android:src="@drawable/play"
+        android:tint="@color/nav_item_unselected_color"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="@dimen/twenty_four_margin"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivBookTypeBookFragment"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:civ_border_width="0dp"
+        app:civ_border_color="@color/nav_item_unselected_color"/>
+
+
+    <LinearLayout
+        android:id="@+id/llbookItem"
+        android:layout_marginRight="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/ivBookTypeBookFragment"
+        android:layout_toLeftOf="@+id/ivPlayedBookIcon"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitleBookFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:singleLine="true"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#404656"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvPagesBookFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textColor="@color/nav_item_unselected_color" />
+
+            <TextView
+                android:id="@+id/tvWordsBookFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textColor="@color/nav_item_unselected_color" />
+
+            <TextView
+                android:id="@+id/tvTimeBookFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textColor="@color/nav_item_unselected_color" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pbBookFragment"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:progressBackgroundTint="@color/colorPrimary"
+        android:layout_below="@+id/ivBookTypeBookFragment"
+        android:progressTint="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/tvLineBookItem"
+        android:background="@color/nav_item_selected_color"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/pbBookFragment"
+        android:layout_height="0.5dp"/>
+</RelativeLayout>
